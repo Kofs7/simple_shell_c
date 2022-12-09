@@ -308,7 +308,7 @@ void cmd_exec(char *arguments[]) {
   while (arguments[n] != NULL) {
     if (strcmp(arguments[n], "|") == 0) {
       if (cmd_token_count == 0) {
-        fprintf(stderr, "Invalid pipe command\n"); 
+        fprintf(stderr, "Invalid pipe command\n"); //**
         return;
       }
 
@@ -397,3 +397,4 @@ void signal_handler(int signum) {
     kill(cmd_pid, SIGINT);
   }
 }
+
